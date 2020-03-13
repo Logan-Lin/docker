@@ -44,5 +44,5 @@ ENV HADOOP_PREFIX=${HADOOP_INSTALL} \
 ENV PATH=/usr/local/nvidia/bin:/usr/local/cuda/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:${HADOOP_BIN_DIR}:${HADOOP_SBIN_DIR} \
     LD_LIBRARY_PATH=/usr/local/cuda/extras/CUPTI/lib:/usr/local/cuda/extras/CUPTI/lib64:/usr/local/nvidia/lib:/usr/local/nvidia/lib64:/usr/local/cuda/lib64:/usr/local/cuda/targets/x86_64-linux/lib/stubs:${JAVA_HOME}/jre/lib/amd64/server
 
-RUN pip3 install torch===1.4.0 torchvision===0.5.0 -f https://download.pytorch.org/whl/torch_stable.html && \
-    pip3 install -r requirements.txt 
+RUN pip3 –no-cache-dir install torch===1.4.0 torchvision===0.5.0 -f https://download.pytorch.org/whl/torch_stable.html && \
+    pip3 –no-cache-dir install -r requirements.txt 
